@@ -1,0 +1,135 @@
+#nameComment,
+#blogComment,
+#birthComment,
+#textComment {
+  background-color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+}
+#profile {
+  width: 900px;
+  height: auto;
+  margin: 70px auto;
+}
+.profileArea {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  padding: 30px;
+}
+
+#profileImageForm {
+  width: 30%;
+  border: none !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 40px 0 0 !important;
+}
+
+#profileImageForm > img {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #051619;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.uploadProfile {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+#imgUpload {
+  width: 100%;
+}
+
+#profileBtn {
+  background-color: none;
+  color: #051619;
+  border: none;
+  margin-left: auto;
+}
+
+#intro {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.boxs {
+  border-bottom: 1px solid #051619;
+  padding-bottom: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.boxs > h2 {
+  width: 90px;
+  font-size: 20px;
+}
+
+.boxs > div {
+  flex-basis: 80%;
+}
+.boxs img {
+  cursor: pointer;
+}
+#introText {
+  width: 98%;
+}
+
+.textFieldInput {
+  width: 90%;
+  background-color: var(--white-color);
+  padding: 10px 0 10px 10px;
+  margin-bottom: 10px;
+}
+
+#textComment {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+#profileImageForm {
+  margin-top: 100px;
+  border: 1px solid #051619;
+}
+
+.buttonField > button {
+  background-color: var(--button-color);
+  color: var(--white-color);
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+  #profile {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #intro {
+    width: 100%;
+  }
+  .profileArea {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+  #profileImageForm {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #introText {
+    width: 97%;
+  }
+  .textFieldInput {
+    width: 90%;
+  }
+}

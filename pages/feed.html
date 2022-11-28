@@ -1,0 +1,71 @@
+<div id="slide">
+  <h1>BEST POST</h1>
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-bs-ride="true"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner" id="slideList">
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+  </div>
+</div>
+  <div class="wrap">
+    <div id="feed" class="feed">
+      <div class="loading">
+        <div class="loadingSpinner"></div>
+      </div>
+      <div class="card">
+        <img class="cardProfile" id="profileImg" />
+        <div class="cardTitle"><span class="tooltip"></span></div>
+        <div class="cardContent"></div>
+        <div class="cardDate"></div>
+      </div>
+    </div>
+    <a href="#"><i class="fa-solid fa-chevron-up"></i></a>
+  </div>
+  <div class="moreBtn">
+    <button class="loadmore">더보기</button>
+  </div>
+  <script src="js/router.js"></script>
+</div>

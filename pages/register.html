@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="../css/login.css" />
+<div class="registerPage">
+    <div id="registerWrap">
+        <form onsubmit="handleAuth(event)">
+
+            <div class="loginTitle">이메일로 가입하기</div>
+            <div class="authInput">
+                <input type="email" id="email" class="textfield-input" placeholder="이메일" value>
+            </div>
+            <div class="authInput">
+                <input type="password" id="password" class="textfield-input" placeholder="비밀번호" value>
+            </div>
+            <label for="loginBtn" id="labelLoginBtn">
+                <div class="joinBtnSection">
+                    <input type="submit" id="loginBtn" value="회원가입" />
+                </div>
+            </label>
+
+
+        </form>
+    </div>
+    <!-- sns 로그인 -->
+    <div class="loginOthers">
+        <div class="loginTitle">SNS 계정으로 가입하기</div>
+
+        <ul class="loginOthers-list">
+            <li class="loginOthers-item">
+                <button type="button" name="google" class="loginSocial google" onclick="socialLogin(event)"></a>
+            </li>
+            <li class="loginOthers-item">
+                <button type="button" name="github" class="loginSocial github" onclick="socialLogin(event)"></button>
+            </li>
+        </ul>
+    </div>
+
+</div>

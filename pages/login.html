@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="../css/login.css" />
+<div class="loginPage">
+    <div id="loginWrap">
+        <form onsubmit="handleAuth(event)">
+
+            <div class="loginTitle">가입 정보로 로그인</div>
+            <div class="authInput">
+                <input type="email" id="email" class="textfield-input" placeholder="이메일" value>
+            </div>
+            <div class="authInput">
+                <input type="password" id="password" class="textfield-input" placeholder="비밀번호" value>
+            </div>
+
+            <label for="loginBtn" id="labelLoginBtn">
+                <div class="loginBtnSection">
+                    <input type="submit" id="loginBtn" value="로그인" />
+                </div>
+            </label>
+
+        </form>
+    </div>
+    <!-- sns 로그인 -->
+    <div class="loginOthers">
+        <div class="loginTitle">SNS 로그인</div>
+
+        <ul class="loginOthers-list">
+            <li class="loginOthers-item">
+                <button type="button" name="google" class="loginSocial google" onclick="socialLogin(event)"></a>
+            </li>
+            <li class="loginOthers-item">
+                <button type="button" name="github" class="loginSocial github" onclick="socialLogin(event)"></button>
+            </li>
+        </ul>
+
+    </div>
+    <div class="loginOption">
+        <span class="loginOptionText">사심가득한 게시물을 많은 사람들과 공유하고 싶다면?</span>
+        <a class="loginOptionLink" href="#register">회원가입하기</a>
+
+    </div>
+
+
+
+
+</div>

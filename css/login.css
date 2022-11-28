@@ -1,0 +1,262 @@
+.loginPage,
+.registerPage {
+  /* margin: 0;
+  padding: 0; */
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  padding: 130px 100px;
+  width: 100%;
+  margin: auto;
+  max-width: 700px;
+}
+
+#loginWrap,
+#registerWrap {
+  width: 100%;
+  padding: 0 30px;
+}
+.loginTitle {
+  font-family: 'Pretendard-Regular';
+  color: black;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2em;
+  margin-bottom: 22px;
+}
+.textfield-input {
+  padding: 24px 30px;
+  display: block;
+  width: 100%;
+  height: 70px;
+  font-size: 16px;
+  line-height: normal;
+
+  background-color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#labelLoginBtn {
+  display: block;
+  width: 100%;
+}
+.loginBtnSection,
+.joinBtnSection {
+  display: block;
+  margin: 30px 0;
+  padding: 23px 10px;
+  background-color: var(--button-color);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s ease-in-out;
+}
+
+#loginBtn {
+  background-color: transparent;
+  margin-top: 10px;
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4em;
+  margin: auto;
+  width: 100%;
+  border: 0px;
+  cursor: pointer;
+}
+
+.authInput {
+  margin-bottom: 10px;
+}
+.authInput > input {
+  width: 100%;
+  border: 2px solid var(--border-color);
+}
+.authInput > input:focus-visible {
+  outline: var(--button-hover);
+}
+
+.loginOthers {
+  display: block;
+  margin-top: 22px;
+  padding: 0 30px;
+}
+.loginSocial.google {
+  background-image: url('/assets/img-google.png');
+  cursor: pointer;
+}
+.loginSocial.github {
+  background-image: url('/assets/img-github.png');
+  cursor: pointer;
+}
+.loginOthers-list {
+  margin-top: 22px;
+}
+.loginOthers-item {
+  float: left;
+  padding-right: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.loginSocial {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-size: 80px 80px;
+}
+.loginOthers-list:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.loginOption {
+  padding: 0 40px;
+  display: inline-block;
+  margin-top: 20px;
+  line-height: 0;
+}
+
+.loginOptionText {
+  /* display: inline-block; */
+  font-size: 14px;
+  line-height: 1.2em;
+}
+.loginOptionLink {
+  /* display: inline-block; */
+  margin-left: 10px;
+  font-size: 18px;
+  /* font-weight: 500; */
+  line-height: 1.2em;
+  text-decoration: underline;
+}
+
+/* 諛섏쓳��-濡쒓렇��/�뚯썝媛���*/
+@media (max-width: 768px) {
+  .loginPage,
+  .registerPage {
+    margin: 0 auto;
+    padding: 40px 0 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    /* padding: 130px 100px; */
+    width: 100%;
+  }
+
+  #loginWrap,
+  #registerWrap {
+    width: 100%;
+    padding: 0 40px;
+  }
+  .loginTitle {
+    font-family: 'Pretendard-Regular';
+    font-size: 5.238vw;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-bottom: 22px;
+  }
+  .textfield-input {
+    padding: 24px 30px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    line-height: normal;
+    background-color: var(--white-color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  #labelLoginBtn {
+    display: block;
+    width: 100%;
+  }
+  .loginBtnSection,
+  .joinBtnSection {
+    padding: 15px 10px;
+  }
+
+  #loginBtn {
+    margin-top: 10px;
+    display: block;
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin: auto;
+    width: 100%;
+    border: 0px;
+    cursor: pointer;
+  }
+
+  .authInput {
+    margin-bottom: 10px;
+  }
+  .authInput > input {
+    width: 100%;
+  }
+
+  .loginOthers {
+    display: block;
+    margin-top: 22px;
+    padding: 0 40px;
+  }
+  .loginSocial.google {
+    background-image: url('/assets/img-google.png');
+    background-size: cover;
+    cursor: pointer;
+  }
+  .loginSocial.github {
+    background-image: url('/assets/img-github.png');
+    background-size: cover;
+    cursor: pointer;
+  }
+  .loginOthers-list {
+    margin-top: 22px;
+  }
+  .loginOthers-item {
+    float: left;
+    padding-right: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .loginSocial {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+  }
+  .loginOthers-list:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .loginOption {
+    width: 100%;
+    display: block;
+    padding-right: 30px;
+    line-height: 0;
+  }
+
+  .loginOptionText {
+    /* display: inline-block; */
+    font-size: 12px;
+    line-height: 1.2em;
+  }
+  .loginOptionLink {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    /* font-weight: 500; */
+    line-height: 1.2em;
+    text-decoration: underline;
+  }
+}
+
+@media (hover: hover) {
+  .loginBtnSection:hover,
+  .joinBtnSection:hover {
+    background-color: var(--button-hover);
+  }
+}

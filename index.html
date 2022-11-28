@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://sasimi.shop/" />
+    <meta property="og:title" content="사시미" />
+    <meta property="og:image" content="/assets/ogImage.png" />
+    <meta property="og:description" content="트랜드토픽을 쉽고 간단하게" />
+    <meta property="og:site_name" content="사시미" />
+    <!-- 다음의 태그는 필수는 아니지만, 포함하는 것을 추천함 -->
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="400" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/feed.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/slide.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="/css/post_style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- 기동 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--  -->
+    <script
+      src="https://kit.fontawesome.com/419744c921.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico" />
+
+    <title>사시미</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <!-- 로그인 후 노출 -->
+      <!-- 시윤님 코드 추가 -->
+      <p class="desc">트렌드 토픽을 쉽고 간단하게</p>
+      <a href="#" class="title">SASIMI</a>
+      <div class="navbarUser">
+        <div class="pcButton">
+          <a href="#newPost" id="newPost" class="btnIcon"></a>
+          <button
+            type="button"
+            class="btnIcon"
+            onclick="Toggled()"
+            id="dropDown"
+          ></button>
+
+          <ul class="navbarUserAccountMenu">
+            <li><a class="writeNewPost" href="#newPost">새 글 작성</a></li>
+            <li><a class="userName" href="#blog">내 블로그</a></li>
+            <li><a class="userSetting" href="#profile">프로필 설정</a></li>
+            <li>
+              <a class="logoutBtn" href="#" onclick="logout()">로그아웃</a>
+            </li>
+          </ul>
+          <ul class="navbarBeforeLogin">
+            <li><a class="signIn" href="#login">로그인</a></li>
+            <li><a class="join" href="#register">회원가입</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="root">
+      <div id="mainFeed"></div>
+    </div>
+    <script src="js/main.js" type="module"></script>
+    <div class="footer">
+      <div class="footerText">
+        <!-- 시윤수정: 바로 아래 h1 태그 한 줄만 수정-->
+        <h1 style="font-weight: 900">사시미</h1>
+        <p class="footerTitle">4조만의 심플한 색깔을 반영한 이름</p>
+        <p class="footerContent">
+          자바스크립트를 전부 사시미 떠버리겠다는 당찬 포부도 함께 반영한
+          이름이었지만 떠진쪽은 언제나 자바스크립트가 아닌 저희였습니다.
+        </p>
+        <p class="footerTitle">수고해주신 분들</p>
+        <p class="footerContent">변시윤 • 정진수 • 홍희진 • 김동한 • 이기동</p>
+        <p class="tmrwcp">트렌드 토픽을 쉽고 간단하게 SASIMI</p>
+      </div>
+    </div>
+  </body>
+</html>

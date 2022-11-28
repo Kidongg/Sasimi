@@ -1,0 +1,158 @@
+<div id="profile">
+  ​
+  <div class="profileArea">
+    <form onsubmit="changeProfile(event)" id="profileImageForm">
+      <img id="image" src="/assets/logo.png" />
+      <div class="uploadProfile">
+        <input
+          onchange="onFileChange(event)"
+          id="imgUpload"
+          type="file"
+          value="업로드"
+          accept="images/*"
+        />
+        <input id="profileBtn" type="submit" value="수정" />
+      </div>
+    </form>
+    ​
+    <div id="intro">
+      <div class="boxs">
+        <h2>이름</h2>
+        <div id="name">
+          <div id="nameText">이름을 입력해주세요</div>
+        </div>
+        <div id="editName" class="editFormBtn" style="display: none">
+          <form>
+            <div class="textField">
+              <input
+                type="text"
+                id="nameComment"
+                name="name"
+                class="textFieldInput"
+                placeholder="닉네임"
+              />
+            </div>
+            <div class="buttonField">
+              <button
+                type="button"
+                id="saveNameButton"
+                onclick="saveName(event)"
+              >
+                변경하기
+              </button>
+              <!-- <button type="button" id="editButton" style="display: none;" onclick="editName(event)">변경하기</button> -->
+              <button type="button" onclick="closeEditBoxName()">취소</button>
+            </div>
+          </form>
+        </div>
+        <span>
+          <img onclick="openEditBoxName()" src="../assets/button.png" />
+        </span>
+      </div>
+      ​
+      <div class="boxs">
+        <h2>출생년도</h2>
+        <div id="birth">
+          <div id="birthText">출생년도를 입력해주세요</div>
+        </div>
+        <div id="editBirth" class="editFormBtn" style="display: none">
+          <form>
+            <div class="textField">
+              <input
+                type="text"
+                id="birthComment"
+                name="birth"
+                class="textFieldInput"
+                placeholder="출생년도"
+              />
+            </div>
+            <div class="buttonField">
+              <button
+                type="button"
+                id="saveBlogButton"
+                onclick="saveBirth(event)"
+              >
+                변경하기
+              </button>
+              <button type="button" onclick="closeEditBoxBirth()">취소</button>
+            </div>
+          </form>
+        </div>
+        <span>
+          <img onclick="openEditBoxBirth()" src="../assets/button.png" />
+        </span>
+      </div>
+      ​
+      <div class="boxs">
+        <h2 id="h2">자기소개</h2>
+        <div>
+          <div id="introText">자기소개를 입력해주세요</div>
+        </div>
+        <div id="editText" class="editFormBtn" style="display: none">
+          <form>
+            <div class="textField">
+              <input
+                type="textarea"
+                id="textComment"
+                name="intro"
+                class="textFieldInput"
+                placeholder="자기소개"
+              />
+            </div>
+            <div class="buttonField">
+              <button
+                type="button"
+                id="saveTextButton"
+                onclick="saveText(event)"
+              >
+                변경하기
+              </button>
+              <button type="button" onclick="closeEditBoxText()">취소</button>
+            </div>
+          </form>
+        </div>
+        <span>
+          <img onclick="openEditBoxText()" src="../assets/button.png" />
+        </span>
+      </div>
+      <!-- 탈퇴칸 -->
+      ​
+      <div class="boxs">
+        <h2>회원탈퇴</h2>
+        <div id="leave">
+          <div id="leaveComfirmText">사시미를 떠나실건가요?</div>
+        </div>
+        <div id="editLeave" class="editFormBtn" style="display: none">
+          <form>
+            <!--회원탈퇴 업글 -->
+            <!-- 비번 재입력 칸 넒이좀 늘릴수잇나..요.. -->
+            <div class="textField">
+              <input
+                type="password"
+                id="passwordText"
+                name="passwordTypeAgain"
+                class="textFieldInput"
+                placeholder="비밀번호 재입력이 필요합니다."
+              />
+              ​
+            </div>
+            <div class="buttonField">
+              <button type="button" id="leaveBtn" onclick="leave(event)">
+                탈퇴하기
+              </button>
+              <button type="button" onclick="closeEditBoxLeave()">취소</button>
+            </div>
+            <!-- 예전거 -->
+            <!-- <div class="buttonField">
+              <button type="button" id="leaveBtn" onclick="leave(event)">탈퇴하기</button>
+              <button type="button" onclick="closeEditBoxLeave()">취소</button>
+            </div> -->
+          </form>
+        </div>
+        <span>
+          <img onclick="openEditBoxLeave()" src="../assets/button.png" />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

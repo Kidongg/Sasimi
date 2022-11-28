@@ -1,0 +1,218 @@
+.header {
+  height: 200px;
+  border-bottom: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 시윤님 추가 */
+.desc {
+  font-weight: 700;
+  margin-bottom: 60px;
+  letter-spacing: 0.3px;
+}
+/*  */
+.title {
+  position: absolute;
+  font-size: 60px;
+  font-weight: 900;
+  text-decoration: none;
+  color: initial;
+  margin-top: 30px;
+}
+
+.navbarUser {
+  position: absolute;
+  right: 43px;
+  border: 1px solid;
+  display: flex;
+  text-align: center;
+}
+
+.pcButton {
+  display: flex;
+}
+
+.btnIcon {
+  color: initial;
+  text-decoration: none;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#newPost {
+  position: relative;
+  border-right: 1px solid;
+}
+
+#newPost::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f044';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#dropDown::before {
+  /* button으로 바꾸니까 가운데정렬이 풀려서 margin:auto를 줬어요 */
+  margin: auto;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f007';
+}
+/* 시윤님 코드 */
+.mobileRightBtn {
+  display: none;
+}
+/* 시윤수정 */
+.cardDropdownContent {
+  display: none;
+}
+
+/* 푸터 */
+.footer {
+  border-top: 1px solid;
+  margin: 50px 0;
+}
+.footerText {
+  padding: 50px 70px;
+}
+
+.footerTitle {
+  font-weight: 700;
+  margin-top: 13px;
+}
+
+.tmrwcp {
+  margin-top: 50px;
+}
+/*  */
+
+/* 디폴트값: 숨기기 */
+.navbarUserAccountMenu,
+.navbarBeforeLogin {
+  z-index: 2;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  position: absolute;
+  top: 50px;
+  min-width: 150px;
+  right: 0;
+  background-color: var(--backgroun-color);
+  box-shadow: 0px 8px 16px 0px #00000033;
+  overflow: hidden;
+}
+
+/* 드롭다운 버튼 클릭 시 보임 */
+.active {
+  display: block;
+}
+
+.writeNewPost,
+.userName,
+.userSetting,
+.logoutBtn,
+.signIn,
+.join {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+.writeNewPost {
+  display: none;
+}
+
+ul li a:hover {
+  background-color: var(--backgroun-hover-color);
+  color: var(--text-color);
+}
+
+.logoutBtn {
+  color: red;
+}
+
+/* 반응형- 시윤님 코드 */
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    height: 70px;
+  }
+  .desc {
+    display: none;
+  }
+  .title {
+    font-size: 28px;
+    margin: 0;
+  }
+  /* rightBtn -> navberUser */
+  .navbarUser {
+    position: absolute;
+    right: 5px;
+    border: none;
+  }
+
+  /* 시윤수정: 모바일 드롭다운 */
+
+  #newPost {
+    border: none;
+    width: 120px;
+    margin: 0;
+    display: none;
+  }
+  #newPost::before {
+    content: '새글작성';
+  }
+  .writeNewPost {
+    display: block;
+  }
+  .btn {
+    border: none;
+    font-size: 20px;
+    background: none;
+  }
+  .btn:hover {
+    opacity: 0.7;
+  }
+
+  .editBtn::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f044';
+    margin-right: 4px;
+  }
+
+  .deleteBtn::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f2ed';
+  }
+
+  .footer {
+    margin-bottom: 20px;
+  }
+  .footerText {
+    padding: 40px 30px 0px 30px;
+  }
+  .footer h1 {
+    font-size: 24px;
+  }
+  .footerTitle {
+    font-weight: 700;
+    margin-top: 15px;
+  }
+  .footerContent {
+    margin-top: 3px;
+  }
+  .tmrwcp {
+    text-align: center;
+    font-size: 11px;
+    color: gray;
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+.postPageWrap,
+.writeWrap {
+  width: 100%;
+  padding: 100px 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -- 글 본문 css start -- */
+.postPageWrap {
+  margin-bottom: 50px;
+  border-bottom: var(--border-common);
+}
+.myPost {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.postWrap .postTitle {
+  padding: 20px 10px 50px;
+  border-bottom: var(--border-common);
+  text-align: center;
+}
+.postDate {
+  display: block;
+  margin-top: 60px;
+  font-size: 14px;
+  color: #767676;
+}
+
+.postWrap .postDesc {
+  padding: 100px 10%;
+  font-size: 1.25rem;
+  word-break: break-word;
+}
+
+.postWrap .postProfile {
+  position: relative;
+  padding: 30px 10px;
+  border: var(--border-common);
+  border-width: 1px 0 0 0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.postProfile .profileImg {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+.postChangeGroup {
+  position: absolute;
+  right: 10px;
+}
+.postBtn {
+  border: none;
+  background-color: transparent;
+  margin: 0 10px;
+  cursor: pointer;
+}
+/* -- 글 본문 css end -- */
+
+/* -- 글 작성 css start -- */
+.writeWrap {
+  max-width: 1200px;
+}
+
+.writeBtn {
+  align-self: flex-end;
+}
+
+.writeTitleWrap {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #767676;
+}
+.writePostWrap {
+  width: 100%;
+
+  margin-bottom: 30px;
+  max-width: 1200px;
+}
+#writeTitle {
+  width: 100%;
+  padding: 20px 0px;
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #e8e8e8;
+}
+#writePost,
+.writePost {
+  width: 100%;
+  min-height: 400px;
+  background-color: transparent;
+  border: 1px solid #767676;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.postDesc:first-child {
+  white-space: pre;
+}
+
+#writeTitle:focus-visible,
+#writePost:focus-visible,
+.writePost:focus-visible,
+.writeComment:focus-visible,
+.newCmtInput {
+  outline: none;
+}
+
+/* -- 글 작성 css end -- */
+
+.btn {
+  background-color: var(--button-color);
+  color: var(--white-color);
+  transition: 0.2s ease-in-out;
+  font-size: 0.875rem;
+}
+.btn:active {
+  box-shadow: none;
+  border: 1px solid #e2e8f0;
+}
+@media hover {
+  .btn:hover {
+    background-color: var(--button-hover);
+    color: var(--white-color);
+  }
+}
+
+/* -- 댓글 start -- */
+.commentWrap {
+  width: 100%;
+  padding: 0 10px;
+}
+.myComment {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 10px 50px;
+}
+
+.myComment::after {
+  display: block;
+  content: '';
+  clear: right;
+}
+
+#comment-list {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 10px;
+}
+
+.mycards {
+  padding: 30px 10px;
+}
+.mycards:not(:last-child) {
+  border-bottom: var(--border-common);
+}
+
+/* -- 댓글 작성 -- */
+.writeComment {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: var(--border-common);
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.saveCommentBtn {
+  float: right;
+}
+
+.commentTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.commentCardBody {
+  position: relative;
+}
+.updateBtns {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.updateBtn {
+  float: right;
+}
+.newCmtInput {
+  background-color: transparent;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #767676;
+}
+
+.commentProfile {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.commentProfile img,
+.cmtImg {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.commentCard {
+  width: 100%;
+}
+
+p.commentText {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+footer.comment-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cmtAt {
+  font-size: 14px;
+}
+
+.changeBtnGroup {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+}
+
+.noDisplay {
+  display: none;
+}
+.yesDisplay {
+  display: block;
+}

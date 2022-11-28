@@ -1,0 +1,34 @@
+<div class="postPageWrap" id="postList"></div>
+<div class="commentWrap">
+  <div class="commentTitle noDisplay" id="commentTitle">
+    로그인 후 댓글을 달아주세요.
+  </div>
+  <div class="myComment" id="myComment">
+    <div class="commentProfile">
+      <img
+        id="profileImg"
+        width="50px"
+        height="50px"
+        src="/assets/blankProfile.webp"
+      />
+      <span id="nickname">닉네임</span>
+    </div>
+    <div class="writeCommentWrap">
+      <textarea
+        class="writeComment"
+        placeholder="Leave a comment here"
+        id="comment"
+        style="height: 100px"
+      ></textarea>
+    </div>
+
+    <button
+      onclick="save_comment(event)"
+      type="button"
+      class="btn btn-dark saveCommentBtn"
+    >
+      댓글 작성
+    </button>
+  </div>
+</div>
+<div id="comment-list"></div>
