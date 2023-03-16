@@ -12,7 +12,6 @@ import {
   getDoc,
 } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
 import { dbService, authService } from '../firebase.js';
-import { goToPost } from '../router.js';
 
 export const savePost = async (event) => {
   event.preventDefault();

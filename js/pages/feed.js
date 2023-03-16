@@ -100,14 +100,6 @@ export const getFeedList = async () => {
       loadmore.classList.remove('loaded');
     }
 
-    // console.log(
-    //   '기준:',
-    //   currentItems,
-    //   '/',
-    //   '피드 카드 갯수:',
-    //   elementList.length
-    // );
-
     // 게시글 12개 초과시 더보기 보여주기
     loadmore.addEventListener('click', (e) => {
       e.target.classList.add('showLoader');
@@ -119,13 +111,6 @@ export const getFeedList = async () => {
         }
       }
       currentItems += 12;
-      // console.log(
-      //   '더보기:',
-      //   currentItems,
-      //   '/',
-      //   '피드 카드 갯수:',
-      //   elementList.length
-      // );
 
       // 게시글 끝까지 로딩시 더보기 감추기
       if (currentItems >= elementList.length) {

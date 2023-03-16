@@ -8,7 +8,6 @@ import {
     GithubAuthProvider,
     signOut,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
-// import { getAuth, updatePassword } from "firebase/auth";
 // 로그인 성공 시 홈 화면으로 이동
 export const handleAuth = (event) => {
     console.log('handleAuth: 작동');
@@ -34,7 +33,6 @@ export const handleAuth = (event) => {
 
     const matchedEmail = emailVal.match(emailRegex);
     const matchedPw = pwVal.match(pwRegex);
-    // const matchedpwConfirm = pwConfirmVal.match(pwVal);
     if (matchedEmail === null) {
         alert("이메일 형식에 맞게 입력해 주세요");
         email.focus();
@@ -45,16 +43,7 @@ export const handleAuth = (event) => {
         pw.focus();
         return;
     }
-    // 비밀번호 확인
-    // if (pwVal !== pwConfirmVal) {
-    //     confirmPassword.setCustomValidity("비밀번호가 일치하지 않습니다")
-    //     pwConfirm.focus();
-    //     return;
-    // }
-    // if (pwVal === pwConfirmVal) {
-    //     confirmPassword.setCustomValidity("")
-    //     return
-    // }
+    
 
     // 유효성 검사 통과 후 로그인 또는 회원가입 API 요청
     // 로그인, 회원가입 버튼 아이디는 loginBtn입니당..
@@ -64,7 +53,6 @@ export const handleAuth = (event) => {
 
         signInWithEmailAndPassword(authService, emailVal, pwVal)
             .then((userCredential) => {
-                // Signed in
                 const user = userCredential.user;
 
                 window.location.hash = "";
@@ -84,10 +72,8 @@ export const handleAuth = (event) => {
         // 회원가입 버튼 클릭의 경우
         createUserWithEmailAndPassword(authService, emailVal, pwVal)
             .then((userCredential) => {
-                // Signed in
                 console.log("회원가입 성공!");
                 window.location.hash = "";
-                // const user = userCredential.user;
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -117,7 +103,6 @@ export const socialLogin = (event) => {
             const user = result.user;
         })
         .catch((error) => {
-            // Handle Errors here.
             console.log("error:", error);
             const errorCode = error.code;
             const errorMessage = error.message;
@@ -163,10 +148,8 @@ export function Toggled() {
 export const logout = () => {
     signOut(authService)
         .then(() => {
-            // Sign-out successful.
             localStorage.clear();
             console.log("로그아웃 성공");
-            // 이게 최선,,??
             let ulElementBeforeLogin = document.querySelector(".navbarBeforeLogin")
             let ulElementAfterLogin = document.querySelector(".navbarUserAccountMenu")
             ulElementAfterLogin.classList.remove("active");
@@ -174,7 +157,6 @@ export const logout = () => {
 
         })
         .catch((error) => {
-            // An error happened.
             console.log("error:", error);
         });
 

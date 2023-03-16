@@ -5,16 +5,14 @@ import {
   where,
   orderBy,
   limit,
-} from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
-import { dbService } from '../firebase.js';
+} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+import { dbService } from "../firebase.js";
 
-// export let bestTitle1;
-// export let bestText1;
 export const getSlide = async () => {
   let slideList = [];
   const q = query(
-    collection(dbService, 'posts'),
-    orderBy('totalView', 'desc'),
+    collection(dbService, "posts"),
+    orderBy("totalView", "desc"),
     limit(3)
   );
   const querySnapshot = await getDocs(q);
@@ -35,9 +33,6 @@ export const getSlide = async () => {
   let bestTitle3 = slideList[2].title;
   let bestText3 = slideList[2].text;
   let bestView3 = slideList[2].totalView;
-  console.log(bestTitle1, bestText1, bestView1);
-  console.log(bestTitle2, bestText2, bestView2);
-  console.log(bestTitle3, bestText3, bestView3);
 
   const temp_html = `
       <h1>BEST POST</h1>
@@ -73,41 +68,5 @@ export const getSlide = async () => {
       </button>
       </div>
     `;
-  document.getElementById('slide').innerHTML = temp_html;
+  document.getElementById("slide").innerHTML = temp_html;
 };
-
-// export const getFeedList = async () => {
-//   let feedObjList = [];
-//   const q = query(collection(dbService, 'posts'), orderBy('createdAt', 'desc'));
-//   const querySnapshot = await getDocs(q);
-//   querySnapshot.forEach((doc) => {
-//     const feedObj = {
-//       id: doc.id,
-//       ...doc.data(),
-//     };
-//     feedObjList.push(feedObj);
-//   });
-
-//   const feedList = document.getElementById('feed');
-
-//   feedList.innerHTML = '';
-//   feedObjList.forEach((feedObj) => {
-//     const temp_html = `<div id="${
-//       feedObj.id
-//     }" class="card" onclick="goToPost(this)">
-//                 <img class="cardProfile" src="${
-//                   feedObj.profileImg ?? '/assets/blankProfile.webp'
-//                 }"alt="profileImg" />
-//                 <div class="cardTitle">
-//                     <span class="tooltip">${feedObj.title}</span>
-//                     ${feedObj.title}
-//                 </div>
-//                 <div class="cardContent">${feedObj.text}</div>
-//                 <div class="cardDate">${new Date(feedObj.createdAt)
-//                   .toString()
-//                   .slice(0, 25)}</div>
-//             </div>`;
-//     const div = document.createElement('div');
-//     div.classList.add(`mycard`);
-//     div.innerHTML = temp_html;
-//     feedList.appendChild(div);

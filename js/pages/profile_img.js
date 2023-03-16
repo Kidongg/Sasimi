@@ -26,7 +26,7 @@ export const changeProfile = async (event) => {
     photoURL: downloadUrl ? downloadUrl : null,
   })
     .then(() => {
-      // window.location.hash = "#home";
+
       window.location.reload();
     })
     .catch((error) => {
@@ -45,8 +45,6 @@ export const onFileChange = (event) => {
     document.getElementById('image').src = imgDataUrl;
   };
 };
-
-///////////////////////////////////////////////////
 
 export function openEditBoxName() {
   let name = document.getElementById('name');
